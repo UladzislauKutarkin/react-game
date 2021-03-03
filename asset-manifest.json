@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/react-game/static/css/main.9c9c0412.chunk.css",
+    "main.js": "/react-game/static/js/main.66635ac0.chunk.js",
+    "main.js.map": "/react-game/static/js/main.66635ac0.chunk.js.map",
+    "runtime-main.js": "/react-game/static/js/runtime-main.16035653.js",
+    "runtime-main.js.map": "/react-game/static/js/runtime-main.16035653.js.map",
+    "static/css/2.3e35cbb6.chunk.css": "/react-game/static/css/2.3e35cbb6.chunk.css",
+    "static/js/2.ab0f2f9f.chunk.js": "/react-game/static/js/2.ab0f2f9f.chunk.js",
+    "static/js/2.ab0f2f9f.chunk.js.map": "/react-game/static/js/2.ab0f2f9f.chunk.js.map",
+    "static/js/3.03165c5d.chunk.js": "/react-game/static/js/3.03165c5d.chunk.js",
+    "static/js/3.03165c5d.chunk.js.map": "/react-game/static/js/3.03165c5d.chunk.js.map",
+    "static/js/4.1d48edc1.chunk.js": "/react-game/static/js/4.1d48edc1.chunk.js",
+    "static/js/4.1d48edc1.chunk.js.map": "/react-game/static/js/4.1d48edc1.chunk.js.map",
+    "index.html": "/react-game/index.html",
+    "static/css/2.3e35cbb6.chunk.css.map": "/react-game/static/css/2.3e35cbb6.chunk.css.map",
+    "static/css/main.9c9c0412.chunk.css.map": "/react-game/static/css/main.9c9c0412.chunk.css.map",
+    "static/js/2.ab0f2f9f.chunk.js.LICENSE.txt": "/react-game/static/js/2.ab0f2f9f.chunk.js.LICENSE.txt",
+    "static/js/3.03165c5d.chunk.js.LICENSE.txt": "/react-game/static/js/3.03165c5d.chunk.js.LICENSE.txt",
+    "static/media/Chiptronical.f3f52265.ogg": "/react-game/static/media/Chiptronical.f3f52265.ogg",
+    "static/media/mixkit-arcade-bonus-229.53227744.wav": "/react-game/static/media/mixkit-arcade-bonus-229.53227744.wav",
+    "static/media/mixkit-arcade-game-jump-coin-216.ae2de8e7.wav": "/react-game/static/media/mixkit-arcade-game-jump-coin-216.ae2de8e7.wav",
+    "static/media/mixkit-arcade-retro-game-over-213.492ea39f.wav": "/react-game/static/media/mixkit-arcade-retro-game-over-213.492ea39f.wav",
+    "static/media/mixkit-fairy-arcade-sparkle-866.97b6dd27.wav": "/react-game/static/media/mixkit-fairy-arcade-sparkle-866.97b6dd27.wav",
+    "static/media/mixkit-magic-sweep-game-trophy-257.dcc56650.wav": "/react-game/static/media/mixkit-magic-sweep-game-trophy-257.dcc56650.wav",
+    "static/media/mixkit-positive-interface-beep-221.cba6b6d5.wav": "/react-game/static/media/mixkit-positive-interface-beep-221.cba6b6d5.wav",
+    "static/media/mixkit-quick-jump-arcade-game-239.80f01a1b.wav": "/react-game/static/media/mixkit-quick-jump-arcade-game-239.80f01a1b.wav",
+    "static/media/mixkit-unlock-game-notification-253.3e2b8a36.wav": "/react-game/static/media/mixkit-unlock-game-notification-253.3e2b8a36.wav",
+    "static/media/part+1+github-1320568339880199515.77a97279.png": "/react-game/static/media/part+1+github-1320568339880199515.77a97279.png",
+    "static/media/rs_school_js.ad178c0d.svg": "/react-game/static/media/rs_school_js.ad178c0d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.16035653.js",
+    "static/css/2.3e35cbb6.chunk.css",
+    "static/js/2.ab0f2f9f.chunk.js",
+    "static/css/main.9c9c0412.chunk.css",
+    "static/js/main.66635ac0.chunk.js"
+  ]
+}
