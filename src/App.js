@@ -16,6 +16,8 @@ import classicGameSound from './Components/sound/mixkit-positive-interface-beep-
 import refreshSound from './Components/sound/mixkit-quick-jump-arcade-game-239.wav';
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import Header from "./Components/Header";
+import PureModal from 'react-pure-modal';
+import 'react-pure-modal/dist/react-pure-modal.min.css';
 
 
 function App() {
@@ -35,6 +37,7 @@ function App() {
   const [playField, setPlayField] = useState(4);
   const [playFieldUpAndDown, setPlayFieldUpAndDown] = useState(3);
   const [bigField, setBigField] = useState(false)
+  const [modal, setModal] = useState(false);
   const [bgc, setBgc] = useState(  {
       backgroundColor: "#faf8ef"
   });
@@ -45,6 +48,17 @@ function App() {
     [0, 0, 0, 0],
     [0, 0, 0, 0],
   ]);
+  let bestScores = JSON.parse(localStorage.getItem("Best Scores")) || [];
+
+  function getLocalStore() {
+    bestScores.push(score);
+    bestScores.sort((a, b) => b - a);
+    bestScores.splice(10);
+    let uniqueArray = bestScores.filter(function (item, pos) {
+      return bestScores.indexOf(item) === pos;
+    });
+    localStorage.setItem("Best Scores", JSON.stringify(uniqueArray));
+  }
   const handle = useFullScreenHandle();
   const [bestScore, setBestscore] = useLocalStorageState('key',0)
   const [score, setScore] = useState(0)
@@ -151,8 +165,6 @@ function App() {
   };
   // Swipe Left
   const swipeLeft = (lose) => {
-    console.log("swipe left");
-    console.log(playField)
     let oldGrid = data;
     let newArray = cloneDeep(data);
 
@@ -211,10 +223,8 @@ function App() {
   };
 
   const swipeRight = (lose) => {
-    console.log("swipe right");
     let oldData = JSON.parse(JSON.stringify(data));
     let newArray = cloneDeep(data);
-
     for (let i = 3 ; i >= 0; i--) {
       let b = newArray[i];
       let slow = b.length - 1;
@@ -269,7 +279,6 @@ function App() {
   };
 
   const swipeDown = (lose) => {
-    console.log("swipe down");
     let b = cloneDeep(data);
     let oldData = JSON.parse(JSON.stringify(data));
     for (let i = playFieldUpAndDown; i >= 0; i--) {
@@ -325,7 +334,6 @@ function App() {
   };
 
   const swipeUp = (lose) => {
-    console.log("swipe up");
     let b = cloneDeep(data);
     let oldData = JSON.parse(JSON.stringify(data));
     for (let i = 0; i < 4; i++) {
@@ -431,8 +439,27 @@ function App() {
       addNumber(emptyGrid);
       setData(emptyGrid);
       playNewGame();}
+      getLocalStore();
 
   };
+  let scores = JSON.parse(localStorage.getItem("Best Scores"));
+  let i = 0;
+  let tenScore = (arr)=> {
+    if (arr) {
+      return scores.map((arr) => {
+        return (
+            <div>
+              <div key={i++}>
+                <li>{arr}</li>
+              </div>
+            </div>
+        );
+      });
+    } else {
+      return <div>No scores yet</div>
+    }
+  }
+
 
   const handleKeyDown = (event) => {
     if (gameOver) {
@@ -459,6 +486,7 @@ function App() {
     if (gameOverr) {
       setGameOver(true);
       playGameOver()
+      getLocalStore();
     }
   };
   useEffect(() => {
@@ -526,7 +554,27 @@ function App() {
           <div className='HowToPlay'>
             <strong>HOW TO PLAY:</strong> Use your <strong>arrow keys</strong> to move the tiles.
             Tiles with the same number <strong>merge into one</strong> when they touch.
-            Add them up to reach <strong>2048!</strong>
+            Add them up to reach <strong>2048!</strong><span className='btn'
+                                                              onMouseEnter={playNewHover} onMouseLeave={stop}
+                                                              onClick={()=> {setModal(true)}}>
+            <strong>Look your Scores</strong></span>
+            <PureModal className="pureModal"
+                header="Your last Scores"
+                footer={
+                  <div>
+                    <button onClick={()=>{
+                      setModal(false)
+                    }}>Close</button>
+                  </div>
+                }
+                isOpen={modal}
+                onClose={() => {
+                  setModal(false);
+                  return true;
+                }}
+            >
+              <p>{tenScore(scores)}</p>
+            </PureModal>
           </div>
           <Player/>
         </div>

@@ -1,11 +1,12 @@
 
 .App {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background:  #faf8ef;
     color: #776e65;
     transition: 1s;
+    flex-grow: 3;
 }
 .playField{
     width: 345px;
@@ -14,7 +15,6 @@
 .header-wrapper{
     background: #846F5B;
     display: flex;
-    flex-grow:3;
     height: 50px;
 }
 .header-center-items{
@@ -186,7 +186,7 @@
     margin-top: 3%;
     background: #846F5B;
     display: flex;
-    flex-grow:3
+    flex-grow: 1;
 }
 
 .game-footer{

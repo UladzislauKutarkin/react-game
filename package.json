@@ -16,6 +16,7 @@
     "react-easy-swipe": "^0.0.21",
     "react-full-screen": "^1.0.1",
     "react-h5-audio-player": "^3.6.1",
+    "react-pure-modal": "^2.0.16",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-soundplayer": "^1.0.5",
