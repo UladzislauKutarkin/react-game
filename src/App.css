@@ -1,0 +1,212 @@
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background:  #faf8ef;
+    color: #776e65;
+    transition: 1s;
+    flex-grow: 3;
+}
+.playField{
+    width: 345px;
+    margin: 1% auto 0 auto;
+}
+.header-wrapper{
+    background: #846F5B;
+    display: flex;
+    height: 50px;
+}
+.header-center-items{
+    display: flex;
+    margin: 0 auto;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+}
+.refresh-btn{
+    width: 25px;
+    height: 25px;
+}
+
+.rotated {
+    animation:spin 0.5s ease-in-out;
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.HowToPlay{
+    margin-top: 20px;
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    text-align: justify;
+}
+.headerWrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+.game-style{
+    flex-direction: column;
+    background: rgba(187, 173, 160, 0.5);
+    font-size: 20px;
+    width: 70px;
+    height: 40px;
+    flex-wrap: wrap;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+}
+.btn:hover{
+    cursor: pointer;
+    color: #2bc4b8;
+    transition: color 1s ease-out;
+}
+.game-style:first-child{
+    margin-right: 5px;
+}
+.game-style-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    align-content: center;
+}
+.arcade {
+    background: rgb(111, 0, 255);
+}
+.actives {
+    border: 2px solid rgba(67, 104, 121, 1);
+}
+
+.headerTitle{
+    font-family: sans-serif;
+    flex: 1;
+    font-weight: 700;
+    font-size: 60px;
+    color: #776e65;
+}
+.AudioWrapper{
+    background: #846F5B;
+    color: #F8F5F0;
+    width: 345px;
+    height: 100px;
+}
+
+.Score-and-GameBtn-Wrapper{
+    flex: 1;
+    margin-top: auto;
+    justify-content: flex-end;
+}
+.ScoreWrapper {
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: flex-end;
+}
+.Score {
+    display: flex;
+    flex-direction: column;
+    background: rgba(187, 173, 160, 0.5);
+    font-size: 20px;
+    width: 70px;
+    height: 70px;
+    flex-wrap: wrap;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    margin-top: 10px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+}
+.Score:first-child {
+    margin-right: 20px;
+}
+.ScoreLine {
+    flex-wrap: wrap;
+}
+.newGameButton {
+    padding: 10px 10px 10px 5px;
+    background: #846F5B;
+    color: #F8F5F0;
+    width: 95px;
+    border-radius: 7px;
+    font-weight: 900;
+    margin-left: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+}
+
+.playFieldWrapper {
+    background: #AD9D8F;
+    width: max-content;
+    height: max-content;
+    margin:10px auto;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+.gameOverOverlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    background: rgba(238,228,218,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.GameOver {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 900;
+    color: #776E65;
+}
+.tryAgainWrapper{
+    flex: 1;
+    margin-top: auto;
+}
+.tryAgainButton{
+    padding: 10px;
+    background: #846F5B;
+    color: #F8F5F0;
+    width: 80px;
+    border-radius: 7px;
+    font-weight: 900;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+.footer-img{
+    width: 50px;
+    height: 50px;
+}
+.wrapper-footer{
+    margin-top: 3%;
+    background: #846F5B;
+    display: flex;
+    flex-grow: 1;
+}
+
+.game-footer{
+    display: flex;
+    margin: 0 auto;
+    width: 400px;
+    justify-content: space-between;
+}
+.footer-year{
+    font-weight: 900;
+    color: #F8F5F0;
+    font-size: 40px;
+}
+.playMode {
+    text-align: center;
+    background: #968EAF;
+    color: #F8F5F0;
+    font-size: 16px;
+    width: 70px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 3px;
+}
